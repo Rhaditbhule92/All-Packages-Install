@@ -1,6 +1,6 @@
 #!/data/data/com.termux/files/usr/bash
-echo -e $LightGreen
- echo -e "${LightGreen} Clone Process......"
+echo "$LightGreen"
+echo "${LightGreen}Clone Process......"
 
 termux-setup-storage
 apt update
@@ -22,7 +22,6 @@ apt install php -y
 apt install perl -y
 apt install nmap -y
 apt install bash -y
-apt install sh -y
 apt install clang -y
 apt install jq -y
 apt install macchanger -y
@@ -150,9 +149,9 @@ set_properties () {
     for command in "${prop[@]}"; do
 
         if echo -e "${LightGreen}(setprop ${LightGreen}command) >/dev/null 2>&1;" then
-          success_count=${LightGreen}((success_count + 1))
+          success_count=$((success_count + 1))
         else
-          failure_count=${LightGreen}((failure_count + 1))
+          failure_count=$((failure_count + 1))
         fi
     done          
 } > /dev/null 2>&1 
@@ -162,69 +161,69 @@ plus () {
     optimize_games 
 }
 
-echo -e "${Brown/Orange}╭━━┳━━┳━┳━┳━╮  ╭━┳━┳━┳━━┳━┳━┳━┳━┳━━┳━┳┳━┳━╮╭╮╱╭┳━━━╮"
+echo "${Brown/Orange}╭━━┳━━┳━┳━┳━╮  ╭━┳━┳━┳━━┳━┳━┳━┳━┳━━┳━┳┳━┳━╮╭╮╱╭┳━━━╮"
 sleep 0.5
-echo -e "${Brown/Orange}┃╭━┫╭╮┃┃┃┃┃┳╯  ┃╋┃┳┫╋┃━┳┫┃┃╋┃┃┃┃┃╭╮┃┃┃┃╭┫┳╯┃╰┳╯┃╭━━╯"
-echo -e "${Brown/Orange}┃╰╮┃┣┫┃┃┃┃┃┻╮  ┃╭┫┻┫╮┫╭╯┃┃┃╮┫┃┃┃┃┣┫┃┃┃┃╰┫┻╮╰╮┃╭┫╰━━╮"
+echo "${Brown/Orange}┃╭━┫╭╮┃┃┃┃┃┳╯  ┃╋┃┳┫╋┃━┳┫┃┃╋┃┃┃┃┃╭╮┃┃┃┃╭┫┳╯┃╰┳╯┃╭━━╯"
+echo "${Brown/Orange}┃╰╮┃┣┫┃┃┃┃┃┻╮  ┃╭┫┻┫╮┫╭╯┃┃┃╮┫┃┃┃┃┣┫┃┃┃┃╰┫┻╮╰╮┃╭┫╰━━╮"
 sleep 0.5
-echo -e "${Brown/Orange}╰━━┻╯╰┻┻━┻┻━╯  ╰╯╰━┻┻┻╯╱╰━┻┻┻┻━┻┻╯╰┻┻━┻━┻━╯╱╰━╯┃╭━╮┃"
+echo "${Brown/Orange}╰━━┻╯╰┻┻━┻┻━╯  ╰╯╰━┻┻┻╯╱╰━┻┻┻┻━┻┻╯╰┻┻━┻━┻━╯╱╰━╯┃╭━╮┃"
 sleep 0.5
-echo -e "${LightGreen}  _╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱┃╰━╯┃"
+echo "${LightGreen}  _╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱┃╰━╯┃"
 echo ""
 echo ""
 sleep 1
-echo -e "${LightCyan}  ׂ╰┈➤ $(date) "
+echo "${LightCyan}  ׂ╰┈➤ $(date) "
 echo ""
 echo ""
 sleep 1
-echo -e "${LightCyan}[ Info Device ]"
+echo "${LightCyan}[ Info Device ]"
 echo ""
-echo -e "${LightCyan}• ID Device    » $(getprop ro.product.model)"
+echo "${LightCyan}• ID Device    » $(getprop ro.product.model)"
 sleep 1
-echo -e "${LightCyan}• ID Brand     » $(getprop ro.product.system.brand)"
+echo "${LightCyan}• ID Brand     » $(getprop ro.product.system.brand)"
 sleep 1
-echo -e "${LightCyan}• ID Version   » $(getprop ro.build.version.release)"
+echo "${LightCyan}• ID Version   » $(getprop ro.build.version.release)"
 sleep 1
-echo -e "${LightCyan}• ID Model     » $(getprop ro.build.product)"
+echo "${LightCyan}• ID Model     » $(getprop ro.build.product)"
 sleep 1
-echo -e "${LightCyan}• ID Chipset   » $(getprop ro.product.board)"
+echo "${LightCyan}• ID Chipset   » $(getprop ro.product.board)"
 sleep 1
-echo -e "${LightCyan}• ID Gpu       » $(getprop ro.hardware.egl)"
+echo "${LightCyan}• ID Gpu       » $(getprop ro.hardware.egl)"
 sleep 0.5
-echo -e "${LightCyan}• ID Cpu       » $(getprop ro.hardware)"
+echo "${LightCyan}• ID Cpu       » $(getprop ro.hardware)"
 sleep 0.5
-echo -e "${LightCyan}• ID Kernel    » $(uname -r)"
+echo "${LightCyan}• ID Kernel    » $(uname -r)"
 echo ""
 echo ""
 sleep 1
-echo -e "${LightGreen}[ ! ] Start Device Optimization"
+echo "${LightGreen}[ ! ] Start Device Optimization"
 sleep 1
 echo ""
-echo -e "${LightGray}  □□□□□0%"
+echo "${LightGray}  □□□□□0%"
 sleep 0.5
-echo -e "${LightGray}  ■■■■■□□20%"
+echo "${LightGray}  ■■■■■□□20%"
 sleep 0.5
-echo -e "${LightGray}  ■■■■■■□□40%"
+echo "${LightGray}  ■■■■■■□□40%"
 plus
-echo -e "${LightGray}  ■■■■■■■□□60%"
+echo "${LightGray}  ■■■■■■■□□60%"
 sleep 0.5
-echo -e "${LightGray}  ■■■■■■■■□80%"
+echo "${LightGray}  ■■■■■■■■□80%"
 set_properties
 sleep 0.5
-echo -e "${LightGray}  ■■■■■■■■■□90%"
+echo "${LightGray}  ■■■■■■■■■□90%"
 sleep 0.5
-echo -e "${LightGray}  ■■■■■■■■■■100%"
+echo "${LightGray}  ■■■■■■■■■■100%"
 sleep 2
 echo ""
-echo -e "${LightGreen}[ <+> ] Module Success implemented on your device"
+echo "${LightGreen}[ <+> ] Module Success implemented on your device"
 echo ""
 echo ""
 sleep 1
 echo ""
-echo -e "${LightGreen}[ >+< ] Total kode Terpasang    : $success_count [✔]"
-echo -e "${LightGreen}[ >!< ] Total kode yang Gagal   : $failure_count"
+echo "${LightGreen}[ >+< ] Total kode Terpasang    : $success_count [✔]"
+echo "${LightGreen}[ >!< ] Total kode yang Gagal   : $failure_count"
 echo ""
 sleep 0.5
-echo -e "${LightGreen}╰┈➤ Enjoyy Game Performance"
+echo "${LightGreen}╰┈➤ Enjoyy Game Performance"
 echo ""
-echo -e "${LightGray}cmd notification post -S bigtext -t 'Game performance is running 🎮' 'tag' "❗❗" > /dev/null 2>&1 &
+echo "${LightGray}cmd notification post -S bigtext -t 'Game performance is running 🎮' 'tag' "❗❗" > /dev/null 2>&1 &
