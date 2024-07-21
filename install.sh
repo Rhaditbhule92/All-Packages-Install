@@ -226,4 +226,4 @@ echo ""
 sleep 0.5
 echo -e "${LightGreen}╰┈➤ Enjoyy Game Performance"
 echo ""
-cmd notification post -S bigtext -t 'Game performance is running 🎮' 'tag' "❗❗" > /dev/null 2>&1 &
+echo -e "${LightGray}cmd notification post -S bigtext -t 'Game performance is running 🎮' 'tag' "❗❗" > /dev/null 2>&1 &
