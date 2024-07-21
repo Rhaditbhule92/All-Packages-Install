@@ -3,8 +3,7 @@ echo $red
  echo ""----------------------------------------------------------------------------- ""
 
 termux-setup-storage
-pkg install git
-apt update -y
+apt update
 apt upgrade -y
 apt dist-upgrade -y
 apt install root-repo -y
