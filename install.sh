@@ -6,7 +6,7 @@ termux-setup-storage
 apt update
 apt upgrade -y
 apt dist-upgrade -y
-apt install git -y
+apt install git
 apt install root-repo -y
 apt install x11-repo -y
 apt install termux-api -y
