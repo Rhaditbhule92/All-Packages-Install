@@ -6,6 +6,7 @@ termux-setup-storage
 apt update
 apt upgrade -y
 apt dist-upgrade -y
+apt install git -y
 apt install root-repo -y
 apt install x11-repo -y
 apt install termux-api -y
@@ -13,7 +14,7 @@ apt install mc -y
 apt install toilet -y
 apt install figlet -y
 apt install cloudflared -y
-apt install python -y           #installation......
+apt install python -y
 apt install python2 -y
 apt install ruby -y 
 apt install git -y
