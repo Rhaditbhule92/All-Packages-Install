@@ -39,11 +39,6 @@ gem install lolcat
 apt install openssl
 apt install bmon -y
 
-echo " If You Connected To Internet Then  "
-echo " YOUR PACKAGES IS INSTALLED SUCCESSFULLY "
-
-yttapart2="File modified"
-
 if [ "$(wc -c < "$0")" -ne 6759 ]; then
   echo "$yttapart2"
   exit 1
@@ -62,7 +57,7 @@ apply_settings () {
 settings put global window_animation_scale 0.5
 settings put global transition_animation_scale 0.5
 settings put global animator_duration_scale 0.5
-settings put system pointer_speed 7
+settings put system pointer_speed 5
 settings put system peak_refresh_rate 120
 settings put system user_refresh_rate 120
 settings put global activity_manager_constants max_cached_processes 1024
