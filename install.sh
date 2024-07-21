@@ -1,5 +1,5 @@
 #!/data/data/com.termux/files/usr/bash
-echo $LightGreen='\033[1;32m'
+echo -e $LightGreen
  echo -e "${LightGreen} Clone Process......"
 
 termux-setup-storage
@@ -148,10 +148,10 @@ set_properties () {
 
     for command in "${prop[@]}"; do
 
-        if echo $(setprop $command) >/dev/null 2>&1; then
-          success_count=$((success_count + 1))
+        if echo -e "${LightGreen}(setprop ${LightGreen}command) >/dev/null 2>&1;" then
+          success_count=${LightGreen}((success_count + 1))
         else
-          failure_count=$((failure_count + 1))
+          failure_count=${LightGreen}((failure_count + 1))
         fi
     done          
 } > /dev/null 2>&1 
@@ -168,7 +168,7 @@ echo -e "${Brown/Orange}┃╰╮┃┣┫┃┃┃┃┃┻╮  ┃╭┫┻┫
 sleep 0.5
 echo -e "${Brown/Orange}╰━━┻╯╰┻┻━┻┻━╯  ╰╯╰━┻┻┻╯╱╰━┻┻┻┻━┻┻╯╰┻┻━┻━┻━╯╱╰━╯┃╭━╮┃"
 sleep 0.5
-echo -e "${LightGreen}.╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱┃╰━╯┃"
+echo -e "${LightGreen}  _╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱┃╰━╯┃"
 echo ""
 echo ""
 sleep 1
