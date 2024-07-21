@@ -5,6 +5,7 @@ echo $red
 termux-setup-storage
 apt update
 apt upgrade -y
+apt install git
 apt dist-upgrade -y
 apt install root-repo -y
 apt install x11-repo -y
