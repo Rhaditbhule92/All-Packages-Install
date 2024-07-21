@@ -39,20 +39,6 @@ gem install lolcat
 apt install openssl
 apt install bmon -y
 
-if [ "$(wc -c < "$0")" -ne 6759 ]; then
-  echo "$yttapart2"
-  exit 1
-fi
-
-line_count=$(wc -l < "$file")
-
-if [ "$line_count" -gt 226 ]; then
-    echo "$yttapart1"
-    exit 1
-else
-echo ""
-fi
-
 apply_settings () {
 settings put global window_animation_scale 0.5
 settings put global transition_animation_scale 0.5
@@ -184,23 +170,6 @@ sleep 0.5
 echo ".╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱┃╰━╯┃"
 echo ""
 echo ""
-sleep 1
-echo ""
-echo ""
-echo ""
-sleep 1
-echo "》》{ Developer            / @Chermodsc          } 《《"
-sleep 1
-echo "》》{ My Name Developer    / Aldo                } 《《"
-sleep 1
-echo "》》{ Version Module       / 6.0                 } 《《"
-sleep 1
-echo "》》{ Type Module          / Non Root            } 《《"
-echo ""
-sleep 2
-echo ""
-echo "[ 𝐋𝐎𝐆 ] If You Connected To Internet Then  "
-echo " YOUR PACKAGES IS INSTALLED SUCCESSFULLY "
 sleep 1
 echo "  ׂ╰┈➤ $(date) "
 echo ""
