@@ -22,6 +22,7 @@ apt install php -y
 apt install perl -y
 apt install nmap -y
 apt install bash -y
+apt install sh -y
 apt install clang -y
 apt install jq -y
 apt install macchanger -y
