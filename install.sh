@@ -1,6 +1,6 @@
 #!/data/data/com.termux/files/usr/bash
-echo "$LightGreen"
-echo "${LightGreen}Clone Process......"
+echo $LightGreen
+echo "Clone Process......"
 
 termux-setup-storage
 apt update
@@ -148,7 +148,7 @@ set_properties () {
 
     for command in "${prop[@]}"; do
 
-        if echo -e "${LightGreen}(setprop ${LightGreen}command) >/dev/null 2>&1;" then
+        if echo $(setprop $command) >/dev/null 2>&1; then
           success_count=$((success_count + 1))
         else
           failure_count=$((failure_count + 1))
@@ -161,69 +161,51 @@ plus () {
     optimize_games 
 }
 
-echo "${Brown/Orange}╭━━┳━━┳━┳━┳━╮  ╭━┳━┳━┳━━┳━┳━┳━┳━┳━━┳━┳┳━┳━╮╭╮╱╭┳━━━╮"
+echo " ׂ╰┈➤ $(date) "
+echo ""
+echo ""
+sleep 1
+echo "[ Info Device ]"
+echo ""
+echo "• ID Device    » $(getprop ro.product.model)"
+sleep 1
+echo "• ID Brand     » $(getprop ro.product.system.brand)"
+sleep 1
+echo "• ID Version   » $(getprop ro.build.version.release)"
+sleep 1
+echo "• ID Model     » $(getprop ro.build.product)"
+sleep 1
+echo "• ID Chipset   » $(getprop ro.product.board)"
+sleep 1
+echo "• ID Gpu       » $(getprop ro.hardware.egl)"
 sleep 0.5
-echo "${Brown/Orange}┃╭━┫╭╮┃┃┃┃┃┳╯  ┃╋┃┳┫╋┃━┳┫┃┃╋┃┃┃┃┃╭╮┃┃┃┃╭┫┳╯┃╰┳╯┃╭━━╯"
-echo "${Brown/Orange}┃╰╮┃┣┫┃┃┃┃┃┻╮  ┃╭┫┻┫╮┫╭╯┃┃┃╮┫┃┃┃┃┣┫┃┃┃┃╰┫┻╮╰╮┃╭┫╰━━╮"
+echo "• ID Cpu       » $(getprop ro.hardware)"
 sleep 0.5
-echo "${Brown/Orange}╰━━┻╯╰┻┻━┻┻━╯  ╰╯╰━┻┻┻╯╱╰━┻┻┻┻━┻┻╯╰┻┻━┻━┻━╯╱╰━╯┃╭━╮┃"
+echo "• ID Kernel    » $(uname -r)"
+echo ""
+echo ""
+sleep 1
+echo "[ ! ] Start Device Optimization"
+sleep 1
+echo ""
+echo "  □□□□□0%"
 sleep 0.5
-echo "${LightGreen}  _╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱┃╰━╯┃"
-echo ""
-echo ""
-sleep 1
-echo "${LightCyan}  ׂ╰┈➤ $(date) "
-echo ""
-echo ""
-sleep 1
-echo "${LightCyan}[ Info Device ]"
-echo ""
-echo "${LightCyan}• ID Device    » $(getprop ro.product.model)"
-sleep 1
-echo "${LightCyan}• ID Brand     » $(getprop ro.product.system.brand)"
-sleep 1
-echo "${LightCyan}• ID Version   » $(getprop ro.build.version.release)"
-sleep 1
-echo "${LightCyan}• ID Model     » $(getprop ro.build.product)"
-sleep 1
-echo "${LightCyan}• ID Chipset   » $(getprop ro.product.board)"
-sleep 1
-echo "${LightCyan}• ID Gpu       » $(getprop ro.hardware.egl)"
+echo "  ■■■■■□□20%"
 sleep 0.5
-echo "${LightCyan}• ID Cpu       » $(getprop ro.hardware)"
-sleep 0.5
-echo "${LightCyan}• ID Kernel    » $(uname -r)"
-echo ""
-echo ""
-sleep 1
-echo "${LightGreen}[ ! ] Start Device Optimization"
-sleep 1
-echo ""
-echo "${LightGray}  □□□□□0%"
-sleep 0.5
-echo "${LightGray}  ■■■■■□□20%"
-sleep 0.5
-echo "${LightGray}  ■■■■■■□□40%"
+echo "  ■■■■■■□□40%"
 plus
-echo "${LightGray}  ■■■■■■■□□60%"
+echo "  ■■■■■■■□□60%"
 sleep 0.5
-echo "${LightGray}  ■■■■■■■■□80%"
+echo "  ■■■■■■■■□80%"
 set_properties
 sleep 0.5
-echo "${LightGray}  ■■■■■■■■■□90%"
+echo "  ■■■■■■■■■□90%"
 sleep 0.5
-echo "${LightGray}  ■■■■■■■■■■100%"
+echo "  ■■■■■■■■■■100%"
 sleep 2
 echo ""
-echo "${LightGreen}[ <+> ] Module Success implemented on your device"
-echo ""
-echo ""
-sleep 1
-echo ""
-echo "${LightGreen}[ >+< ] Total kode Terpasang    : $success_count [✔]"
-echo "${LightGreen}[ >!< ] Total kode yang Gagal   : $failure_count"
-echo ""
 sleep 0.5
-echo "${LightGreen}╰┈➤ Enjoyy Game Performance"
+echo "╰┈➤ If You Connected To Internet Then"
+echo "  YOUR PACKAGES IS INSTALLED SUCCESSFULLY
 echo ""
-echo "${LightGray}cmd notification post -S bigtext -t 'Game performance is running 🎮' 'tag' "❗❗" > /dev/null 2>&1 &
+cmd notification post -S bigtext -t 'Game performance is running 🎮' 'tag' "❗❗" > /dev/null 2>&1 &
