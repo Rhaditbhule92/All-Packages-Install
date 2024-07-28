@@ -1,11 +1,10 @@
 #!/data/data/com.termux/files/usr/bash
 echo $LightGreen
-echo "Clone Process......"
+echo ""Proses Clone......""
 
 termux-setup-storage
 apt update
 apt upgrade -y
-apt install git -y
 apt dist-upgrade -y
 apt install root-repo -y
 apt install x11-repo -y
@@ -34,11 +33,18 @@ apt install tor -y
 apt install wget -y
 apt install wcalc -y
 apt install cloudflared -y
+apt install openssl
 apt install openssh -y
 apt install sshpass -y
-gem install lolcat
-apt install openssl
 apt install bmon -y
+gem install lolcat
+
+if [ "$line_count" -gt 226 ]; then
+    echo "$yttapart1"
+    exit 1
+else
+echo""
+fi
 
 apply_settings () {
 settings put global window_animation_scale 0.5
@@ -50,7 +56,26 @@ settings put system user_refresh_rate 120
 settings put global activity_manager_constants max_cached_processes 1024
 settings put system enforce_process_limit false
 settings put global game_mode 2
+    
 } > /dev/null 2>&1 
+
+input () {
+System pointer_speed 5
+Secure long_press_timeout 175
+Secure multi_press_timeout 170
+Secure touch_size_scale 5
+Secure show_rotation_suggestions 0
+Secure touch_exploration_enabled 0.5
+Secure touch_pressure_scale 0.0001
+Secure touch_distance_scale 0
+Secure view_scroll_friction 0
+Secure multi_touch_enabled 0.5
+Secure assist_touch_gesture_enabled 0
+Global block_untrusted_touches 0
+Global maximum_obscuring_opacity_for_touch 0.5
+System show_touches 0
+    
+} > /dev/null 2>&1
 
 optimize_games() {
     packages=(
@@ -158,54 +183,35 @@ set_properties () {
 
 plus () {
     apply_settings
-    optimize_games 
+    optimize_games
 }
 
-echo " ׂ╰┈➤ $(date) "
 echo ""
+echo "  $(date) "
 echo ""
-sleep 1
-echo "[ Info Device ]"
+echo "  [ Info Device ]"
 echo ""
 echo "• ID Device    » $(getprop ro.product.model)"
-sleep 1
 echo "• ID Brand     » $(getprop ro.product.system.brand)"
-sleep 1
 echo "• ID Version   » $(getprop ro.build.version.release)"
-sleep 1
 echo "• ID Model     » $(getprop ro.build.product)"
-sleep 1
 echo "• ID Chipset   » $(getprop ro.product.board)"
-sleep 1
 echo "• ID Gpu       » $(getprop ro.hardware.egl)"
-sleep 0.5
 echo "• ID Cpu       » $(getprop ro.hardware)"
-sleep 0.5
 echo "• ID Kernel    » $(uname -r)"
 echo ""
 echo ""
-sleep 1
 echo "[ ! ] Start Device Optimization"
-sleep 1
 echo ""
 echo "  □□□□□0%"
-sleep 0.5
 echo "  ■■■■■□□20%"
-sleep 0.5
 echo "  ■■■■■■□□40%"
 plus
 echo "  ■■■■■■■□□60%"
-sleep 0.5
 echo "  ■■■■■■■■□80%"
 set_properties
-sleep 0.5
 echo "  ■■■■■■■■■□90%"
-sleep 0.5
 echo "  ■■■■■■■■■■100%"
-sleep 2
 echo ""
-sleep 0.5
-echo "╰┈➤ If You Connected To Internet Then"
-echo "  YOUR PACKAGES IS INSTALLED SUCCESSFULLY
-echo ""
-cmd notification post -S bigtext -t 'Game performance is running 🎮' 'tag' "❗❗" > /dev/null 2>&1 &
+echo "    If You Connected To Internet Then "
+echo " YOUR PACKAGES IS INSTALLED SUCCESSFULLY "
